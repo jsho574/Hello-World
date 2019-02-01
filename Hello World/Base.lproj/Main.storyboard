@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hello World View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hello_World" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HelloWorldViewController" customModule="Hello_World" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,10 +27,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUS-xH-waA">
                                 <rect key="frame" x="170" y="71" width="35" height="30"/>
                                 <state key="normal" title="Hello"/>
+                                <connections>
+                                    <action selector="doHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6J-tK-emO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdB-aN-yTO">
                                 <rect key="frame" x="169.5" y="111" width="36" height="30"/>
                                 <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="doClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKk-5c-pCB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,9 +47,13 @@
                             <constraint firstItem="ZUS-xH-waA" firstAttribute="centerX" secondItem="HTO-wN-jJc" secondAttribute="centerX" id="Ngt-rU-vbl"/>
                             <constraint firstItem="HTO-wN-jJc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Re0-e3-3tW"/>
                             <constraint firstItem="vdB-aN-yTO" firstAttribute="top" secondItem="ZUS-xH-waA" secondAttribute="bottom" constant="10" id="f52-yG-0aG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vdB-aN-yTO" secondAttribute="trailing" constant="169.5" id="lQs-g5-ruD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="HTO-wN-jJc" id="ho6-bK-Tal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
